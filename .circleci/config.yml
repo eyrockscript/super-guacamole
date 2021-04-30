@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: Analyze on SonarCloud
-          command: gradle build sonarqube -Dsonar.projectKey="eyrockscript_jasypt-api" -Dsonar.organization="eyrockscript" -Dsonar.host.url="https://sonarcloud.io"
+          command: gradle build sonarqube -Dsonar.projectKey="eyrockscript_super-guacamole" -Dsonar.organization="eyrockscript" -Dsonar.host.url="https://sonarcloud.io"
 
 workflows:
   main:
