@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SpringRecaptchaV3</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script type="text/javascript"
+                src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+
+  <script>
+	$(document).ready(function () {
+		$("#name").val("some value");
+	    $("#button").click(function () {
+	        var captchaResponse = grecaptcha.getResponse();
+	        console.log(captchaResponse);
+	        var name = $("#name").val();
+	        var helloRequest = {
+	            'name': name
+	        };
+	
+	        $.ajax({
+	            type: "POST",
+	            contentType: 'application/json',
+	            dataType: "json",
+	            headers: {
+	                "captcha-response": captchaResponse
+	            },
+	            data: JSON.stringify(helloRequest),
+	            url: "http://localhost:8080/simple-request",
+	            success: function (data) {
+					console.log(data);
+	            }
+	        });
+	    });
+	});
+ </script>
+</head>
+<body>
+  	<app-root></app-root>
+</body>
+</html>
