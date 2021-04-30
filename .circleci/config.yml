@@ -1,7 +1,17 @@
 version: 2.1
-orbs:
-  node: circleci/node@3.0.0
+
+jobs:
+  build:
+    docker:
+      - image: 'circleci/openjdk:11-jdk'
+    steps:
+      - checkout
+      - run:
+          name: Analyze on SonarCloud
+          command: gradle build sonarqube -Dsonar.projectKey="eyrockscript_jasypt-api" -Dsonar.organization="eyrockscript" -Dsonar.host.url="https://sonarcloud.io"
+
 workflows:
-  node-tests:
+  main:
     jobs:
-      - node/test
+      - build:
+          context: SonarCloud
