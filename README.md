@@ -2,7 +2,7 @@
  _recaptcha v3 -> spring(boot + aop) + angular + jquery_
 
 [![Build Status](https://www.travis-ci.com/eyrockscript/super-guacamole.svg?branch=main)](https://www.travis-ci.com/eyrockscript/super-guacamole)
-[![CircleCI](https://circleci.com/gh/eyrockscript/super-guacamole/tree/master.svg?style=svg)](https://circleci.com/gh/eyrockscript/super-guacamole/tree/master)
+[![CircleCI](https://circleci.com/gh/eyrockscript/super-guacamole/tree/main.svg?style=svg)](https://circleci.com/gh/eyrockscript/super-guacamole/tree/main)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=eyrockscript_super-guacamole&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=eyrockscript_super-guacamole)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=eyrockscript_super-guacamole&metric=bugs)](https://sonarcloud.io/dashboard?id=eyrockscript_super-guacamole)
 
